@@ -8,7 +8,7 @@ Repositorio de entregas - Curso Backend Coderhouse
 - En esta rama se hizo el Merge desde la rama sprint1.
 
 ## Rama Sprint1
-- En esta rama se trabajó y luego se hizo el Merge en rama Dev
+- En esta rama se trabajó y luego se hizo el Merge en rama Dev. Acto seguido, fue eliminada
 
 ## Pasos para su utilización
 - Clonar el repositorio con 
@@ -17,5 +17,5 @@ git clone https://github.com/MatsNC/codeserver.git
 - Abrir una terminal en esa carpeta.
 - Ejecutar node ./ProductManager.js para usar la clase de los productos y node ./UserManager.js para usar la de los usuarios.
 
-#Autor:
+# Autor:
 Matías Nicolás Correa.
