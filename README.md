@@ -15,6 +15,7 @@ Repositorio de entregas - Curso Backend Coderhouse
 git clone https://github.com/MatsNC/codeserver.git
 - Abrir el proyecto con VSC.
 - Abrir una terminal en esa carpeta.
+- Ejecutar git checkout dev para cambiar a rama dev
 - Ejecutar node ./ProductManager.js para usar la clase de los productos y node ./UserManager.js para usar la de los usuarios.
 
 # Autor:
