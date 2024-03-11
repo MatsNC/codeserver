@@ -33,12 +33,12 @@ function read_sync() {
 
 //////////////////////////////////
 
-const check_file_cb = (file_path) => {
-
-}
-
-const delete_file_cb = (file_path) => {
-
+const delete_file_cb = async (file_path) => {
+    fs.unlink(file_path, (error) => {
+        if (error) {
+            console.log('ocurrio un error ');
+        }
+    })
 }
 
 const create_cb = (file_path) => {
@@ -50,19 +50,31 @@ const create_cb = (file_path) => {
 }
 
 function read_cb(file_path) {
-    fs.readFile(file_path, configuracion, (error,res) => {
+    fs.readFile(file_path, configuracion, (error, res) => {
         if (error) {
-           return error;
+            return error;
         }
         console.log(res);
-        return res; 
+        return res;
     });
 }
+
+//////////////////////////////////////////////
+
+const create_promises = (file_path) => {
+    fs.promises.writeFile(file_path, contenido)
+        .then(res => console.log('todo ok'))
+        .catch(error => console.log('todo mal'))
+}
+
+
 
 // create_sync();
 // read_sync();
 // check_file_sync(ruta_de_archivo);
 // delete_file_sync(ruta_de_archivo);
 // check_file_sync(ruta_de_archivo);
-create_cb(ruta_de_archivo);
-read_cb(ruta_de_archivo);
+// create_cb(ruta_de_archivo);
+// read_cb(ruta_de_archivo);
+// delete_file_cb(ruta_de_archivo);
+create_promises(ruta_de_archivo);
