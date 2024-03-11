@@ -1,0 +1,14 @@
+{
+  "name": "codeserver",
+  "version": "1.0.0",
+  "description": "Practicas JS",
+  "main": "index.js",
+  "scripts": {    
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Correa",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
