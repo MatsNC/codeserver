@@ -1,19 +1,29 @@
 class ProductManager {
   static #productos = [];
   create(data) {
-    const product = {
-      id:
-        ProductManager.#productos.length === 0
-          ? 1
-          : ProductManager.#productos[ProductManager.#productos.length - 1].id +
-            1,
-      title: data.title,
-      photo: data.photo,
-      price: data.price,
-      stock: data.stock,
-    };
-    ProductManager.#productos.push(product);
-    console.log("Producto Creado");
+    try {
+      const product = {
+        id:
+          ProductManager.#productos.length === 0
+            ? 1
+            : ProductManager.#productos[ProductManager.#productos.length - 1]
+                .id + 1,
+        title: data.title,
+        photo: data.photo,
+        price: data.price,
+        stock: data.stock,
+      };
+      if (!data.title) {
+        throw new Error("No se pudo crear el producto");
+      }
+      else 
+      {
+        ProductManager.#productos.push(product);
+        console.log("Producto Creado");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
   read() {
     return ProductManager.#productos;
