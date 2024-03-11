@@ -2,9 +2,9 @@
   "name": "codeserver",
   "version": "1.0.0",
   "description": "Practicas JS",
-  "main": "index.js",
-  "scripts": {    
-    "dev": "nodemon src/index.js"
+  "main": "filesystem.js",
+  "scripts": {
+    "dev": "nodemon src/filesystem.js"
   },
   "author": "Correa",
   "license": "ISC",

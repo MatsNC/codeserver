@@ -1,11 +1,12 @@
 const fs = require('fs');
 
 let ruta_de_archivo = './data.json'
+let ruta_de_archivo_mal = './data/data.json'
 let contenido = JSON.stringify(
     {
         name: 'Pepe',
         age: 13,
-        ocupation: 'Student',    
+        ocupation: 'Student',
     }
 );
 
@@ -25,31 +26,43 @@ const create_sync = () => {
     console.log("Writing...");
 }
 
-function read_sync () {
-    let file_content = fs.readFileSync(ruta_de_archivo,configuracion)
+function read_sync() {
+    let file_content = fs.readFileSync(ruta_de_archivo, configuracion)
     console.log(contenido);
 }
 
 //////////////////////////////////
 
-const check_file_async = (file_path) => {
+const check_file_cb = (file_path) => {
 
 }
 
-const delete_file_async = (file_path) => {
+const delete_file_cb = (file_path) => {
 
 }
 
-const create_async = () => {
-
+const create_cb = (file_path) => {
+    fs.writeFile(file_path, contenido, (error) => {
+        if (error) {
+            console.log('ocurrio un error ');
+        }
+    })
 }
 
-function read_async () {
-    
+function read_cb(file_path) {
+    fs.readFile(file_path, configuracion, (error,res) => {
+        if (error) {
+           return error;
+        }
+        console.log(res);
+        return res; 
+    });
 }
 
-create_sync();
-read_sync();
-check_file_sync(ruta_de_archivo);
-delete_file_sync(ruta_de_archivo);
-check_file_sync(ruta_de_archivo);
+// create_sync();
+// read_sync();
+// check_file_sync(ruta_de_archivo);
+// delete_file_sync(ruta_de_archivo);
+// check_file_sync(ruta_de_archivo);
+create_cb(ruta_de_archivo);
+read_cb(ruta_de_archivo);
