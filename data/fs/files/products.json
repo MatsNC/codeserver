@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Placa de Video NVIDIA RTX3050",
+    "photo": "foto_Video_NVIDIA.jpg",
+    "price": 350000,
+    "stock": 10
+  },
+  {
+    "title": "3050",
+    "photo": "foto_Video_NVIDIA.jpg",
+    "price": 350000,
+    "stock": 10
+  },
+  {
+    "title": "NVIDIA RTX3050",
+    "photo": "foto_Video_NVIDIA.jpg",
+    "price": 350000,
+    "stock": 10
+  }
+]

@@ -1,3 +1,8 @@
+const fs = require('fs');
+
+let products_path = './files/products.json';
+let users_path = './files/users.json';
+
 class ProductManager {
   static #productos = [];
   create(data) {
