@@ -1,6 +1,68 @@
 const fs = require("fs");
+const crypto = require("crypto");
 
-let products_path = "./data/fs/files/products.json";
+class ProductManager {
+  constructor() {
+    this.path = "./data/fs/files/products.json";
+    this.init();
+  }
+  init() {
+    const exist = fs.existsSync(this.path);
+    if (!exist) {
+      const prodArray = JSON.stringify([], null, 2);
+      fs.writeFileSync(this.path, prodArray);
+      console.log("Archivo creado");
+    } else {
+      console.log("Archivo ya existe");
+    }
+  }
+  async create(data) {
+    try {
+      if (!data.title) {
+        throw new Error("Ingrese titulo");
+      } else {
+        const product = {
+          id: crypto.randomBytes(12).toString("hex"),
+          title: data.title,
+          photo: data.photo || "foto_default.jpg",
+          category: data.category,
+          price: data.price,
+          stock: data.stock,
+        };
+        let allProd = await fs.promises.readFile(this.path, 'utf-8');
+        allProd = JSON.parse(allProd);
+        allProd.push(product);
+        allProd = JSON.stringify(allProd);
+        await fs.promises.writeFile(this.path,allProd);
+        console.log(product);
+        return product;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  async read() {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+  async readOne(id) {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+  async destroy(id) {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+}
 
 let product1 = {
   title: "Placa de Video NVIDIA RTX3050",
