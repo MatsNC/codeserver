@@ -7,6 +7,7 @@ class ProductManager {
     this.init();
   }
   init() {
+    fs.unlinkSync(this.path);
     const exist = fs.existsSync(this.path);
     if (!exist) {
       const prodArray = JSON.stringify([], null, 2);
@@ -29,11 +30,11 @@ class ProductManager {
           price: data.price,
           stock: data.stock,
         };
-        let allProd = await fs.promises.readFile(this.path, 'utf-8');
+        let allProd = await fs.promises.readFile(this.path, "utf-8");
         allProd = JSON.parse(allProd);
         allProd.push(product);
-        allProd = JSON.stringify(allProd);
-        await fs.promises.writeFile(this.path,allProd);
+        allProd = JSON.stringify(allProd, null, 2);
+        await fs.promises.writeFile(this.path, allProd);
         console.log(product);
         return product;
       }
@@ -43,61 +44,60 @@ class ProductManager {
   }
   async read() {
     try {
-      
+      let allProducts = await fs.promises.readFile(this.path, "utf-8");
+      allProducts = JSON.parse(allProducts);
+      if (allProducts.length === 0) {
+        throw new Error("No hay notas");
+      } else {
+        console.log(allProducts);
+        return allProducts;
+      }
     } catch (error) {
-      
+      console.log(error);
     }
   }
   async readOne(id) {
     try {
-      
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   }
   async destroy(id) {
     try {
-      
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   }
 }
 
-let product1 = {
-  title: "Placa de Video NVIDIA RTX3050",
-  photo: "foto_Video_NVIDIA.jpg",
-  price: 350000,
-  stock: 10,
-};
-let product2 = {
-  title: "3050",
-  photo: "foto_Video_NVIDIA.jpg",
-  price: 350000,
-  stock: 10,
-};
-let product3 = {
-  title: "NVIDIA RTX3050",
-  photo: "foto_Video_NVIDIA.jpg",
-  price: 350000,
-  stock: 10,
-};
-
-let contenido = JSON.stringify([], null, 2);
-
-fs.unlinkSync(products_path);
-
-if (!fs.existsSync(products_path)) {
-  fs.writeFileSync(products_path, contenido);
+async function test() {
+  try {
+    const gestorDeProductos = new ProductManager();
+    await gestorDeProductos.create({
+      title: "Placa de Video NVIDIA RTX3050",
+      photo: "foto_Video_NVIDIA.jpg",
+      category: "Placa de Video",
+      price: 350000,
+      stock: 10,
+    });
+    await gestorDeProductos.create({
+      title: "Monitor Samsung 24 pulgadas",
+      photo: "foto_Mon_Sam_24.jpg",
+      category: "Monitor",
+      price: 150000,
+      stock: 30,
+    });
+    
+    await gestorDeProductos.read();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-const products = JSON.parse(fs.readFileSync(products_path, "utf-8"));
-products.push(product1);
-products.push(product2);
-products.push(product3);
+test();
 
-fs.writeFileSync(products_path, JSON.stringify(products, null, 2));
-console.log(JSON.parse(fs.readFileSync(products_path, "utf-8")));
+// gestorDeProductos.create({
+//   title: "Placa de Video NVIDIA RTX3050",
+//   photo: "foto_Video_NVIDIA.jpg",
+//   price: 350000,
+//   stock: 10,
+// });
 
 /////////////////////////////////////////
 

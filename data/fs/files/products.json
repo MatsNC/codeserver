@@ -1,19 +1,9 @@
 [
   {
+    "id": "f31e015ed4407e2fca270763",
     "title": "Placa de Video NVIDIA RTX3050",
     "photo": "foto_Video_NVIDIA.jpg",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "title": "3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "title": "NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
+    "category": "Placa de Video",
     "price": 350000,
     "stock": 10
   }
