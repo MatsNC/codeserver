@@ -7,7 +7,7 @@ class ProductManager {
     this.init();
   }
   init() {
-    fs.unlinkSync(this.path);
+    //fs.unlinkSync(this.path); //Sacar esto después
     const exist = fs.existsSync(this.path);
     if (!exist) {
       const prodArray = JSON.stringify([], null, 2);
@@ -49,6 +49,7 @@ class ProductManager {
       if (allProducts.length === 0) {
         throw new Error("No hay notas");
       } else {
+        console.log("Lista de Productos: " + JSON.stringify(allProducts, null, 2));
         console.log(allProducts);
         return allProducts;
       }
@@ -58,11 +59,39 @@ class ProductManager {
   }
   async readOne(id) {
     try {
-    } catch (error) {}
+      let allProducts = await fs.promises.readFile(this.path, "utf-8");
+      allProducts = JSON.parse(allProducts);
+      let findProduct = allProducts.find((each) => each.id === id);
+      if (!findProduct) {
+        throw new Error("Producto no encontrado");
+      } else {
+        console.log(
+          "Producto encontrado: " + JSON.stringify(findProduct, null, 2)
+        );
+        return findProduct;
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
   async destroy(id) {
     try {
-    } catch (error) {}
+      let destroyProduct = this.readOne(id);
+      if (!destroyProduct) {
+        throw new Error("Producto no encontrado");
+      } else {
+        let restOfProducts = await fs.promises.readFile(this.path, "utf-8");
+        restOfProducts = JSON.parse(restOfProducts);
+        restOfProducts = restOfProducts.filter((each) => each.id !== id);
+        restOfProducts = JSON.stringify(restOfProducts, null, 2);
+        await fs.promises.writeFile(this.path, restOfProducts);
+        console.log("Id del Producto eliminado: " + JSON.stringify(destroyProduct.id, null, 2));
+        //console.log(destroyProduct);
+        return destroyProduct;
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
@@ -83,8 +112,10 @@ async function test() {
       price: 150000,
       stock: 30,
     });
-    
+
     await gestorDeProductos.read();
+    await gestorDeProductos.readOne("263cb910628fc096af913e32");
+    await gestorDeProductos.destroy("7041405604e36f3ea35b255c");
   } catch (error) {
     console.log(error);
   }
