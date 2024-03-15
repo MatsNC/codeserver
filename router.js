@@ -1,4 +1,5 @@
 const UserManager = require('./data/memory/UserManager.memory.js');
+let user = new UserManager();
 
 function router(req, res) {
   const url = req.url;
@@ -15,9 +16,9 @@ function router(req, res) {
     //     res.writeHead(200, options).end("USUARIOS");
     //     break;    
     case "/api/users":
-        const users = gestorDeUsuario.read();
-        users = JSON.stringify(user);
-        res.writeHead(200, options).end(users);
+        user = user.read();
+        user = JSON.stringify(user);
+        res.writeHead(200, options).end(user);
         break;    
     default:
         res.writeHead(404, options).end("RUTA NO ENCONTRADA");

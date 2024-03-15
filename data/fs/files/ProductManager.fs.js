@@ -49,7 +49,9 @@ class ProductManager {
       if (allProducts.length === 0) {
         throw new Error("No hay notas");
       } else {
-        console.log("Lista de Productos: " + JSON.stringify(allProducts, null, 2));
+        console.log(
+          "Lista de Productos: " + JSON.stringify(allProducts, null, 2)
+        );
         console.log(allProducts);
         return allProducts;
       }
@@ -85,7 +87,10 @@ class ProductManager {
         restOfProducts = restOfProducts.filter((each) => each.id !== id);
         restOfProducts = JSON.stringify(restOfProducts, null, 2);
         await fs.promises.writeFile(this.path, restOfProducts);
-        console.log("Id del Producto eliminado: " + JSON.stringify(destroyProduct.id, null, 2));
+        console.log(
+          "Id del Producto eliminado: " +
+            JSON.stringify(destroyProduct.id, null, 2)
+        );
         //console.log(destroyProduct);
         return destroyProduct;
       }
