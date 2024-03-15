@@ -47,7 +47,7 @@ class ProductManager {
       let allProducts = await fs.promises.readFile(this.path, "utf-8");
       allProducts = JSON.parse(allProducts);
       if (allProducts.length === 0) {
-        throw new Error("No hay notas");
+        throw new Error("No hay productos cargados");
       } else {
         console.log(
           "Lista de Productos: " + JSON.stringify(allProducts, null, 2)

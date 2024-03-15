@@ -1,15 +1,14 @@
+const crypto = require("crypto");
+
 class ProductManager {
   static #productos = [];
-  create(data) {
+  async create(data) {
     try {
       const product = {
-        id:
-          ProductManager.#productos.length === 0
-            ? 1
-            : ProductManager.#productos[ProductManager.#productos.length - 1]
-                .id + 1,
+        id: crypto.randomBytes(12).toString("hex"),
         title: data.title,
-        photo: data.photo,
+        photo: data.photo || "foto_default.jpg",
+        category: data.category,
         price: data.price,
         stock: data.stock,
       };
@@ -23,8 +22,16 @@ class ProductManager {
       console.log(error);
     }
   }
-  read() {
-    return ProductManager.#productos;
+  async read() {
+    try {
+      if (ProductManager.#productos.length === 0) {
+        throw new Error("No hay productos cargados");
+      } else {
+        return ProductManager.#productos;
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
   //Metodo para encontrar un producto por id
   readOne(id) {
@@ -40,11 +47,6 @@ class ProductManager {
     );
     console.log(newArray);
   }
-  //Metodo para actualizar un producto cuyo id se pasa por parámetro
-  // update(id, product) {
-  //   let prodReplace = this.readOne(id);
-  //   ProductManager.#productos[prodReplace.id - 1] = product;
-  // }
 }
 
 const gestorDeProductos = new ProductManager();
