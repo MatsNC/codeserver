@@ -1,0 +1,23 @@
+[
+  {
+    "id": "c19c858d124ce1f41b07448d",
+    "photo": "foto_usr1.jpg",
+    "email": "rodri_perez@gmail.com",
+    "password": "RoDP#5870*!",
+    "role": "Admin"
+  },
+  {
+    "id": "6447cec3b20c0d4f142b03d2",
+    "photo": "foto_usr2.jpg",
+    "email": "matspind_45@gmail.com",
+    "password": "654!La3p2L1*",
+    "role": "Key User"
+  },
+  {
+    "id": "46ff9164b51e2a842e3af04c",
+    "photo": "foto_usr3.jpg",
+    "email": "maria@gmail.com",
+    "password": "L#2vF6Qz@",
+    "role": "Client"
+  }
+]

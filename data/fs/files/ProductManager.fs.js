@@ -6,8 +6,9 @@ class ProductManager {
     this.path = "./data/fs/files/products.json";
     this.init();
   }
+  //Metodo para crear archivo de productos:
   init() {
-    //fs.unlinkSync(this.path); //Sacar esto después
+    fs.unlinkSync(this.path);
     const exist = fs.existsSync(this.path);
     if (!exist) {
       const prodArray = JSON.stringify([], null, 2);
@@ -17,31 +18,36 @@ class ProductManager {
       console.log("Archivo ya existe");
     }
   }
+  //Metodo para crear un producto:
   async create(data) {
     try {
-      if (!data.title) {
-        throw new Error("Ingrese titulo");
+      if (!data.title || !data.category || !data.price || !data.stock) {
+        throw new Error(
+          "No se pudo crear el producto. Ingrese nombre, categoria, precio y stock"
+        );
       } else {
         const product = {
-          id: crypto.randomBytes(12).toString("hex"),
+          id: data.id || crypto.randomBytes(12).toString("hex"),
           title: data.title,
           photo: data.photo || "foto_default.jpg",
           category: data.category,
           price: data.price,
           stock: data.stock,
         };
+
         let allProd = await fs.promises.readFile(this.path, "utf-8");
         allProd = JSON.parse(allProd);
         allProd.push(product);
         allProd = JSON.stringify(allProd, null, 2);
         await fs.promises.writeFile(this.path, allProd);
-        console.log(product);
+        console.log("Producto creado");
         return product;
       }
     } catch (error) {
       console.log(error);
     }
   }
+  //Metodo para leer listado de productos desde archivo:
   async read() {
     try {
       let allProducts = await fs.promises.readFile(this.path, "utf-8");
@@ -52,13 +58,14 @@ class ProductManager {
         console.log(
           "Lista de Productos: " + JSON.stringify(allProducts, null, 2)
         );
-        console.log(allProducts);
+        //console.log(allProducts);
         return allProducts;
       }
     } catch (error) {
       console.log(error);
     }
   }
+  //Metodo para encontrar un producto por id en archivo:
   async readOne(id) {
     try {
       let allProducts = await fs.promises.readFile(this.path, "utf-8");
@@ -76,9 +83,10 @@ class ProductManager {
       console.log(error);
     }
   }
+  //Metodo para eliminar un producto del archivo:
   async destroy(id) {
     try {
-      let destroyProduct = this.readOne(id);
+      let destroyProduct = await this.readOne(id);
       if (!destroyProduct) {
         throw new Error("Producto no encontrado");
       } else {
@@ -88,10 +96,8 @@ class ProductManager {
         restOfProducts = JSON.stringify(restOfProducts, null, 2);
         await fs.promises.writeFile(this.path, restOfProducts);
         console.log(
-          "Id del Producto eliminado: " +
-            JSON.stringify(destroyProduct.id, null, 2)
+          "Producto eliminado: " + JSON.stringify(destroyProduct, null, 2)
         );
-        //console.log(destroyProduct);
         return destroyProduct;
       }
     } catch (error) {
@@ -118,125 +124,78 @@ async function test() {
       stock: 30,
     });
 
+    await gestorDeProductos.create({
+      title: "Microprocesador AMD Ryzen 7",
+      photo: "foto_uP_Ryzen_7.jpg",
+      category: "Microprocesador",
+      price: 250000,
+      stock: 5,
+    });
+
+    await gestorDeProductos.create({
+      title: "Silla Gamer MID PLUS ROJA",
+      photo: "foto_Gamer_Roja.jpg",
+      category: "Silla Gamer",
+      price: 150000,
+      stock: 15,
+    });
+
+    await gestorDeProductos.create({
+      title: "Mother Asus Prime A320M-K",
+      photo: "foto_Mother_A320M.jpg",
+      category: "Motherboard",
+      price: 185000,
+      stock: 50,
+    });
+
+    await gestorDeProductos.create({
+      title: "Teclado RGB",
+      photo: "foto_keyboard.jpg",
+      category: "Periféricos",
+      price: 55000,
+      stock: 150,
+    });
+
+    await gestorDeProductos.create({
+      title: "Fuente de alimentación 600W",
+      photo: "foto_psu600.jpg",
+      category: "Fuentes",
+      price: 90000,
+      stock: 20,
+    });
+
+    await gestorDeProductos.create({
+      title: "Auriculares con micrófono",
+      photo: "foto_headset_mic.jpg",
+      category: "Componentes",
+      price: 35000,
+      stock: 34,
+    });
+
+    await gestorDeProductos.create({
+      title: "Tarjeta de red Wi-Fi AC1200",
+      photo: "foto_wifi_card_AC1200.jpg",
+      category: "Componentes",
+      price: 120000,
+      stock: 22,
+    });
+
+    //Este se usa para probar métodos con parámetro id
+    await gestorDeProductos.create({
+      id: "123456789",
+      title: "Memoria RAM DDR4 16GB",
+      photo: "foto_ram16.jpg",
+      category: "Componentes",
+      price: 200000,
+      stock: 5,
+    });
+
     await gestorDeProductos.read();
-    await gestorDeProductos.readOne("263cb910628fc096af913e32");
-    await gestorDeProductos.destroy("7041405604e36f3ea35b255c");
+    await gestorDeProductos.readOne("123456789");
+    await gestorDeProductos.destroy("123456789");
   } catch (error) {
     console.log(error);
   }
 }
 
 test();
-
-// gestorDeProductos.create({
-//   title: "Placa de Video NVIDIA RTX3050",
-//   photo: "foto_Video_NVIDIA.jpg",
-//   price: 350000,
-//   stock: 10,
-// });
-
-/////////////////////////////////////////
-
-// class ProductManager {
-//   static #productos = [];
-//   create(data) {
-//     try {
-//       const product = {
-//         id:
-//           ProductManager.#productos.length === 0
-//             ? 1
-//             : ProductManager.#productos[ProductManager.#productos.length - 1]
-//                 .id + 1,
-//         title: data.title,
-//         photo: data.photo,
-//         price: data.price,
-//         stock: data.stock,
-//       };
-//       if (!data.title) {
-//         throw new Error("No se pudo crear el producto");
-//       } else {
-//         ProductManager.#productos.push(product);
-//         console.log("Producto Creado");
-//       }
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-//   read() {
-//     return ProductManager.#productos;
-//   }
-//   //Metodo para encontrar un producto por id
-//   readOne(id) {
-//     const findProd = ProductManager.#productos.find(
-//       (product) => product.id === id
-//     );
-//     return findProd !== undefined ? findProd : "Producto no encontrado";
-//   }
-//   //Metodo para eliminar un producto
-//   destroy(id) {
-//     const newArray = ProductManager.#productos.filter(
-//       (product) => product.id !== id
-//     );
-//     console.log(newArray);
-//   }
-//   //Metodo para actualizar un producto cuyo id se pasa por parámetro
-//   // update(id, product) {
-//   //   let prodReplace = this.readOne(id);
-//   //   ProductManager.#productos[prodReplace.id - 1] = product;
-//   // }
-// }
-
-// const gestorDeProductos = new ProductManager();
-
-// gestorDeProductos.create({
-//   title: "Placa de Video NVIDIA RTX3050",
-//   photo: "foto_Video_NVIDIA.jpg",
-//   price: 350000,
-//   stock: 10,
-// });
-
-// gestorDeProductos.create({
-//   title: "Monitor Samsung 24 pulgadas",
-//   photo: "foto_Mon_Sam_24.jpg",
-//   price: 150000,
-//   stock: 30,
-// });
-
-// gestorDeProductos.create({
-//   title: "Microprocesador AMD Ryzen 7",
-//   photo: "foto_uP_Ryzen_7.jpg",
-//   price: 250000,
-//   stock: 5,
-// });
-
-// gestorDeProductos.create({
-//   title: "Silla Gamer MID PLUS ROJA",
-//   photo: "foto_Gamer_Roja.jpg",
-//   price: 150000,
-//   stock: 15,
-// });
-
-// gestorDeProductos.create({
-//   title: "Mother Asus Prime A320M-K",
-//   photo: "foto_Mother_A320M.jpg",
-//   price: 185000,
-//   stock: 50,
-// });
-
-// const newProd = {
-//   id: 5,
-//   title: "Mother Caquita Nacional",
-//   photo: "foto_Caquita_Nacional.jpg",
-//   price: 70000,
-//   stock: 200,
-// };
-
-// console.log("Array de Productos:");
-// console.log(gestorDeProductos.read());
-// console.log("Producto buscado:");
-// console.log(gestorDeProductos.readOne(1));
-// console.log("Array actualizado:");
-// gestorDeProductos.destroy(1);
-//   gestorDeProductos.update(5, newProd);
-// console.log("Array Reemplazado:");
-//   console.log(gestorDeProductos.read());

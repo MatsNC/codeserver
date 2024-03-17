@@ -1,6 +1,6 @@
 [
   {
-    "id": "04c9f1f3c33ae75d7803fa14",
+    "id": "6612acc35cecb5cc025867fc",
     "title": "Placa de Video NVIDIA RTX3050",
     "photo": "foto_Video_NVIDIA.jpg",
     "category": "Placa de Video",
@@ -8,7 +8,7 @@
     "stock": 10
   },
   {
-    "id": "a37d70c74f51e16c7205f976",
+    "id": "ccdd01d0d2e4aeee4bc70d99",
     "title": "Monitor Samsung 24 pulgadas",
     "photo": "foto_Mon_Sam_24.jpg",
     "category": "Monitor",
@@ -16,427 +16,59 @@
     "stock": 30
   },
   {
-    "id": "25b075ae548e474903ed31b9",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
+    "id": "a9469d7c206028eb2f2bad9a",
+    "title": "Microprocesador AMD Ryzen 7",
+    "photo": "foto_uP_Ryzen_7.jpg",
+    "category": "Microprocesador",
+    "price": 250000,
+    "stock": 5
+  },
+  {
+    "id": "69aca740c1784e98569342c1",
+    "title": "Silla Gamer MID PLUS ROJA",
+    "photo": "foto_Gamer_Roja.jpg",
+    "category": "Silla Gamer",
     "price": 150000,
-    "stock": 30
+    "stock": 15
   },
   {
-    "id": "952168c19a13f91f92a6da55",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
+    "id": "9132f95ef021ee61225014f6",
+    "title": "Mother Asus Prime A320M-K",
+    "photo": "foto_Mother_A320M.jpg",
+    "category": "Motherboard",
+    "price": 185000,
+    "stock": 50
   },
   {
-    "id": "27be8d58df57f8d236d9e4b1",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
+    "id": "2b4a913b730c2e9b7f093bf0",
+    "title": "Teclado RGB",
+    "photo": "foto_keyboard.jpg",
+    "category": "Periféricos",
+    "price": 55000,
+    "stock": 150
   },
   {
-    "id": "e6d78dee9f9af11bd4163c2c",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
+    "id": "6851f8abe8205ce5801342a9",
+    "title": "Fuente de alimentación 600W",
+    "photo": "foto_psu600.jpg",
+    "category": "Fuentes",
+    "price": 90000,
+    "stock": 20
   },
   {
-    "id": "e2b246fb4168a97302c98ba1",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
+    "id": "3425ccc771125765494d5bae",
+    "title": "Auriculares con micrófono",
+    "photo": "foto_headset_mic.jpg",
+    "category": "Componentes",
+    "price": 35000,
+    "stock": 34
   },
   {
-    "id": "e9a92b8f9ac5f54bd5f7908c",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "51750abdc36577b9c871e01c",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "6f46d69fb4531cb8066d7c8c",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "33c055165b5052ae2bb5b6b6",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "528d004ad63da76f0212c49f",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "c886edca2a0b5b8c863d0781",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "61a562e8e477611f4c036f76",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "10ca4ebfe4fb795f503daf22",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "a799ad373ef7f8f3d69c7679",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "6b2196d5d2f89cda48b62c85",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "402d90ff74c35ab664f5fa5c",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "58f1f7e94d0579e1291ee42a",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "081d80bda8e9bb06e7d7ac53",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "013198820f054fb1ea448283",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "0a7e22f6c385b26ecc36131d",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "b504f45cbe042c333b906b78",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "404eac264d0d8ed91d50737a",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "3105d818ef0b15f3d4f73224",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "e46c728b1c24a30ac3504c44",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "f9ee6e2cff8a99830a63eebe",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "91010f579bec0165dc18cf1c",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "a57b8d276471ed873358dc92",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "e4c02eebef4ea1e9b940d1e1",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "7f43694b218172c41bae4220",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "e8972def13afccc43b7ced9f",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "69585087241ad013fe58fdac",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "c3f10bf1c3f73b7c42337a26",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "5b9696d1ce641ef285ff0150",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "3b96882b0a9bd45baf4e9709",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "99b1ccc8ba610cd4a7753ccd",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "818d2bea945c9175a7ceed7f",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "fbe69b67a7d711fe9e903b2f",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "cd5230f2fe12701ead344de6",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "7e243fdba7df47b37a608225",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "7ae1b4a8dffb4598c924635d",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "263cb910628fc096af913e32",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "db72e1ecaa70c352b0901b0f",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "a29c2ce280d0963167c4ec2a",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "516ba6a89209d26a690d1022",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "083d9b4372e260bbead8b315",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "8156f8abe936a538ecb5210b",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "b28a05486ba20437be88cf06",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "afebedf9b222715c01fae898",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "68d260e53bc2d7256cb21436",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "d22b185a8616387aed930000",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "b48440afe708542caf96817c",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "e8019351e600d1aa817fc2a5",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "fc8e694921e135a90c4555a3",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
+    "id": "9c15278f5ecd352cceabb038",
+    "title": "Tarjeta de red Wi-Fi AC1200",
+    "photo": "foto_wifi_card_AC1200.jpg",
+    "category": "Componentes",
+    "price": 120000,
+    "stock": 22
   }
 ]

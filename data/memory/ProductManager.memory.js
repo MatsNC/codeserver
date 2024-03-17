@@ -2,27 +2,32 @@ const crypto = require("crypto");
 
 class ProductManager {
   static #productos = [];
-  async create(data) {
+  //Metodo para crear un producto:
+  create(data) {
     try {
       const product = {
-        id: crypto.randomBytes(12).toString("hex"),
+        id: data.id || crypto.randomBytes(12).toString("hex"),
         title: data.title,
         photo: data.photo || "foto_default.jpg",
         category: data.category,
         price: data.price,
         stock: data.stock,
       };
-      if (!data.title) {
-        throw new Error("No se pudo crear el producto");
+      if (!data.title || !data.category || !data.price || !data.stock) {
+        throw new Error(
+          "No se pudo crear el producto. Ingrese nombre, categoria, precio y stock"
+        );
       } else {
         ProductManager.#productos.push(product);
         console.log("Producto Creado");
+        return product;
       }
     } catch (error) {
       console.log(error);
     }
   }
-  async read() {
+  //Metodo para leer listado de productos:
+  read() {
     try {
       if (ProductManager.#productos.length === 0) {
         throw new Error("No hay productos cargados");
@@ -33,19 +38,37 @@ class ProductManager {
       console.log(error);
     }
   }
-  //Metodo para encontrar un producto por id
+  //Metodo para encontrar un producto especifico:
   readOne(id) {
-    const findProd = ProductManager.#productos.find(
-      (product) => product.id === id
-    );
-    return findProd !== undefined ? findProd : "Producto no encontrado";
+    try {
+      const findProd = ProductManager.#productos.find(
+        (product) => product.id === id
+      );
+      if (findProd !== undefined) {
+        return findProd;
+      } else {
+        throw new Error("Producto no encontrado");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
-  //Metodo para eliminar un producto
+  //Metodo para eliminar un producto:
   destroy(id) {
-    const newArray = ProductManager.#productos.filter(
-      (product) => product.id !== id
-    );
-    console.log(newArray);
+    try {
+      let destroyProduct = this.readOne(id);
+      if (!destroyProduct) {
+        throw new Error("Producto no encontrado");
+      } else {
+        const newArray = ProductManager.#productos.filter(
+          (product) => product.id !== id
+        );
+        ProductManager.#productos = newArray;
+        return destroyProduct;
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
@@ -54,6 +77,7 @@ const gestorDeProductos = new ProductManager();
 gestorDeProductos.create({
   title: "Placa de Video NVIDIA RTX3050",
   photo: "foto_Video_NVIDIA.jpg",
+  category: "Placa de Video",
   price: 350000,
   stock: 10,
 });
@@ -61,6 +85,7 @@ gestorDeProductos.create({
 gestorDeProductos.create({
   title: "Monitor Samsung 24 pulgadas",
   photo: "foto_Mon_Sam_24.jpg",
+  category: "Monitor",
   price: 150000,
   stock: 30,
 });
@@ -68,6 +93,7 @@ gestorDeProductos.create({
 gestorDeProductos.create({
   title: "Microprocesador AMD Ryzen 7",
   photo: "foto_uP_Ryzen_7.jpg",
+  category: "Microprocesador",
   price: 250000,
   stock: 5,
 });
@@ -75,6 +101,7 @@ gestorDeProductos.create({
 gestorDeProductos.create({
   title: "Silla Gamer MID PLUS ROJA",
   photo: "foto_Gamer_Roja.jpg",
+  category: "Silla Gamer",
   price: 150000,
   stock: 15,
 });
@@ -82,14 +109,58 @@ gestorDeProductos.create({
 gestorDeProductos.create({
   title: "Mother Asus Prime A320M-K",
   photo: "foto_Mother_A320M.jpg",
+  category: "Motherboard",
   price: 185000,
   stock: 50,
 });
 
-console.log("Array de Productos:");
+gestorDeProductos.create({
+  title: "Teclado RGB",
+  photo: "foto_keyboard.jpg",
+  category: "Periféricos",
+  price: 55000,
+  stock: 150,
+});
+
+gestorDeProductos.create({
+  title: "Fuente de alimentación 600W",
+  photo: "foto_psu600.jpg",
+  category: "Fuentes",
+  price: 90000,
+  stock: 20,
+});
+
+gestorDeProductos.create({
+  title: "Auriculares con micrófono",
+  photo: "foto_headset_mic.jpg",
+  category: "Componentes",
+  price: 35000,
+  stock: 34,
+});
+
+gestorDeProductos.create({
+  title: "Tarjeta de red Wi-Fi AC1200",
+  photo: "foto_wifi_card_AC1200.jpg",
+  category: "Componentes",
+  price: 120000,
+  stock: 22,
+});
+
+//Este se usa para probar métodos con parámetro id
+gestorDeProductos.create({
+  id: "123456789",
+  title: "Memoria RAM DDR4 16GB",
+  photo: "foto_ram16.jpg",
+  category: "Componentes",
+  price: 200000,
+  stock: 5,
+});
+
+console.log("Listado de Productos:");
 console.log(gestorDeProductos.read());
 console.log("Producto buscado:");
-console.log(gestorDeProductos.readOne(1));
-console.log("Array actualizado:");
-gestorDeProductos.destroy(1);
+console.log(gestorDeProductos.readOne("123456789"));
+console.log("Producto borrado:");
+console.log(gestorDeProductos.destroy("123456789"));
+console.log("Listado actualizado:");
 console.log(gestorDeProductos.read());
