@@ -8,7 +8,7 @@ class UserManager {
   }
   //Metodo para crear archivo de usuarios:
   init() {
-    fs.unlinkSync(this.path);
+    fs.unlinkSync(this.path); //Se deja esta línea para que elimine el archivo previamente creado
     const exist = fs.existsSync(this.path);
     if (!exist) {
       const userArray = JSON.stringify([], null, 2);
