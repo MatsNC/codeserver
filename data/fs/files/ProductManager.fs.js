@@ -8,7 +8,7 @@ class ProductManager {
   }
   //Metodo para crear archivo de productos:
   init() {
-    fs.unlinkSync(this.path);
+    fs.unlinkSync(this.path); //Se deja esta línea para que elimine el archivo previamente creado al inicio
     const exist = fs.existsSync(this.path);
     if (!exist) {
       const prodArray = JSON.stringify([], null, 2);

@@ -12,13 +12,14 @@ function router(req, res) {
     case "/home":
         res.writeHead(200, options).end("HOME");
         break
-    // case "/users":
-    //     res.writeHead(200, options).end("USUARIOS");
-    //     break;    
     case "/api/users":
         user = user.read();
-        user = JSON.stringify(user);
-        res.writeHead(200, options).end(user);
+        if (user !== undefined) {
+          user = JSON.stringify(user);
+          res.writeHead(200, options).end(user);
+        } else {
+          res.writeHead(404, options).end("No se encontraron usuarios");
+        }
         break;    
     default:
         res.writeHead(404, options).end("RUTA NO ENCONTRADA");
