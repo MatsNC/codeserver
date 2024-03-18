@@ -2,7 +2,7 @@
 Repositorio de entregas - Curso Backend Coderhouse
 
 # Segundo Desafío:
-- Aspectos a incluir 
+- Aspectos a incluir: 
 Gestores de “productos” y de “usuarios” para guardar los datos en la memoria (memory) y en archivos (files).
 Definir cuatro usuarios y diez productos en memoria y en archivos.
 Las clases ProductsManager y UsersManager de memory:
