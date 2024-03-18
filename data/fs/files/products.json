@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1f2aa5bd126837cd611fcec2",
+    "title": "Placa de Video NVIDIA RTX3050",
+    "photo": "foto_Video_NVIDIA.jpg",
+    "category": "Placa de Video",
+    "price": 350000,
+    "stock": 10
+  },
+  {
+    "id": "db8dd0e0e7ee13fb81a377ff",
+    "title": "Monitor Samsung 24 pulgadas",
+    "photo": "foto_Mon_Sam_24.jpg",
+    "category": "Monitor",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "64bc9840ff2cba755db608a9",
+    "title": "Microprocesador AMD Ryzen 7",
+    "photo": "foto_uP_Ryzen_7.jpg",
+    "category": "Microprocesador",
+    "price": 250000,
+    "stock": 5
+  },
+  {
+    "id": "499f3d919c2a6fbbde62483c",
+    "title": "Silla Gamer MID PLUS ROJA",
+    "photo": "foto_Gamer_Roja.jpg",
+    "category": "Silla Gamer",
+    "price": 150000,
+    "stock": 15
+  },
+  {
+    "id": "356fd00985ddba5ccda963bf",
+    "title": "Mother Asus Prime A320M-K",
+    "photo": "foto_Mother_A320M.jpg",
+    "category": "Motherboard",
+    "price": 185000,
+    "stock": 50
+  },
+  {
+    "id": "314d7afcb38093a9c97d18a3",
+    "title": "Teclado RGB",
+    "photo": "foto_keyboard.jpg",
+    "category": "Periféricos",
+    "price": 55000,
+    "stock": 150
+  },
+  {
+    "id": "ba91d0f2ce1304605b3c6704",
+    "title": "Fuente de alimentación 600W",
+    "photo": "foto_psu600.jpg",
+    "category": "Fuentes",
+    "price": 90000,
+    "stock": 20
+  },
+  {
+    "id": "204629b9462aca379d65129d",
+    "title": "Auriculares con micrófono",
+    "photo": "foto_headset_mic.jpg",
+    "category": "Componentes",
+    "price": 35000,
+    "stock": 34
+  },
+  {
+    "id": "c261e49f81a1c64fedb65021",
+    "title": "Tarjeta de red Wi-Fi AC1200",
+    "photo": "foto_wifi_card_AC1200.jpg",
+    "category": "Componentes",
+    "price": 120000,
+    "stock": 22
+  }
+]
