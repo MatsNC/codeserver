@@ -88,13 +88,13 @@ gestorDeUsuario.create({
   role: "Client"
 });
 
-// gestorDeUsuario.create({
-//   id: "123456789",
-//   photo: "foto_usr4.jpg",
-//   email: "juan_carlos@yahoo.com",
-//   password: "Gp5@jR9d!",
-//   role: "Admin"
-// });
+gestorDeUsuario.create({
+  id: "123456789",
+  photo: "foto_usr4.jpg",
+  email: "juan_carlos@yahoo.com",
+  password: "Gp5@jR9d!",
+  role: "Admin"
+});
 
 console.log("Listado de Usuarios:");
 console.log(gestorDeUsuario.read());
