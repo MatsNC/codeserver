@@ -1,5 +1,5 @@
-const crypto = require("crypto");
-class UserManager {
+import crypto from 'crypto';
+export default class UserManager {
   static #users = [];
   //Metodo para crear un Usuario:
   create(data) {

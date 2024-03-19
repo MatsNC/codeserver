@@ -1,4 +1,4 @@
-const crypto = require("crypto");
+import crypto from 'crypto';
 
 class ProductManager {
   static #productos = [];
@@ -164,3 +164,5 @@ console.log("Producto borrado:");
 console.log(gestorDeProductos.destroy("123456789"));
 console.log("Listado actualizado:");
 console.log(gestorDeProductos.read());
+
+export default Products = new ProductManager();
