@@ -105,4 +105,3 @@ console.log(gestorDeUsuario.destroy("123456789"));
 console.log("Listado actualizado:");
 console.log(gestorDeUsuario.read());
 
-module.exports = UserManager
