@@ -8,7 +8,7 @@ class ProductManager {
   }
   //Metodo para crear archivo de productos:
   init() {
-    fs.unlinkSync(this.path);
+    //fs.unlinkSync(this.path);
     const exist = fs.existsSync(this.path);
     if (!exist) {
       const prodArray = JSON.stringify([], null, 2);
@@ -48,19 +48,23 @@ class ProductManager {
     }
   }
   //Metodo para leer listado de productos desde archivo:
-  async read() {
+  async read(cat) {
     try {
       let allProducts = await fs.promises.readFile(this.path, "utf-8");
       allProducts = JSON.parse(allProducts);
       if (allProducts.length === 0) {
         throw new Error("No hay productos cargados");
       } else {
-        console.log(
-          "Lista de Productos: " + JSON.stringify(allProducts, null, 2)
-        );
-        //console.log(allProducts);
-        return allProducts;
+        if (cat) {
+          allProducts = allProducts.filter((each) => each.category === cat);
+          console.log(allProducts);        
+          
+        }
+        // console.log(
+        //   "Lista de Productos: " + JSON.stringify(allProducts, null, 2)
+        // );        
       }
+      return allProducts;
     } catch (error) {
       console.log(error);
     }
@@ -109,86 +113,86 @@ class ProductManager {
 async function test() {
   try {
     const gestorDeProductos = new ProductManager();
-    await gestorDeProductos.create({
-      title: "Placa de Video NVIDIA RTX3050",
-      photo: "foto_Video_NVIDIA.jpg",
-      category: "Placa de Video",
-      price: 350000,
-      stock: 10,
-    });
-    await gestorDeProductos.create({
-      title: "Monitor Samsung 24 pulgadas",
-      photo: "foto_Mon_Sam_24.jpg",
-      category: "Monitor",
-      price: 150000,
-      stock: 30,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Placa de Video NVIDIA RTX3050",
+    //   photo: "foto_Video_NVIDIA.jpg",
+    //   category: "Placa de Video",
+    //   price: 350000,
+    //   stock: 10,
+    // });
+    // await gestorDeProductos.create({
+    //   title: "Monitor Samsung 24 pulgadas",
+    //   photo: "foto_Mon_Sam_24.jpg",
+    //   category: "Monitor",
+    //   price: 150000,
+    //   stock: 30,
+    // });
 
-    await gestorDeProductos.create({
-      title: "Microprocesador AMD Ryzen 7",
-      photo: "foto_uP_Ryzen_7.jpg",
-      category: "Microprocesador",
-      price: 250000,
-      stock: 5,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Microprocesador AMD Ryzen 7",
+    //   photo: "foto_uP_Ryzen_7.jpg",
+    //   category: "Microprocesador",
+    //   price: 250000,
+    //   stock: 5,
+    // });
 
-    await gestorDeProductos.create({
-      title: "Silla Gamer MID PLUS ROJA",
-      photo: "foto_Gamer_Roja.jpg",
-      category: "Silla Gamer",
-      price: 150000,
-      stock: 15,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Silla Gamer MID PLUS ROJA",
+    //   photo: "foto_Gamer_Roja.jpg",
+    //   category: "Silla Gamer",
+    //   price: 150000,
+    //   stock: 15,
+    // });
 
-    await gestorDeProductos.create({
-      title: "Mother Asus Prime A320M-K",
-      photo: "foto_Mother_A320M.jpg",
-      category: "Motherboard",
-      price: 185000,
-      stock: 50,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Mother Asus Prime A320M-K",
+    //   photo: "foto_Mother_A320M.jpg",
+    //   category: "Motherboard",
+    //   price: 185000,
+    //   stock: 50,
+    // });
 
-    await gestorDeProductos.create({
-      title: "Teclado RGB",
-      photo: "foto_keyboard.jpg",
-      category: "Periféricos",
-      price: 55000,
-      stock: 150,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Teclado RGB",
+    //   photo: "foto_keyboard.jpg",
+    //   category: "Periféricos",
+    //   price: 55000,
+    //   stock: 150,
+    // });
 
-    await gestorDeProductos.create({
-      title: "Fuente de alimentación 600W",
-      photo: "foto_psu600.jpg",
-      category: "Fuentes",
-      price: 90000,
-      stock: 20,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Fuente de alimentación 600W",
+    //   photo: "foto_psu600.jpg",
+    //   category: "Fuentes",
+    //   price: 90000,
+    //   stock: 20,
+    // });
 
-    await gestorDeProductos.create({
-      title: "Auriculares con micrófono",
-      photo: "foto_headset_mic.jpg",
-      category: "Componentes",
-      price: 35000,
-      stock: 34,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Auriculares con micrófono",
+    //   photo: "foto_headset_mic.jpg",
+    //   category: "Componentes",
+    //   price: 35000,
+    //   stock: 34,
+    // });
 
-    await gestorDeProductos.create({
-      title: "Tarjeta de red Wi-Fi AC1200",
-      photo: "foto_wifi_card_AC1200.jpg",
-      category: "Componentes",
-      price: 120000,
-      stock: 22,
-    });
+    // await gestorDeProductos.create({
+    //   title: "Tarjeta de red Wi-Fi AC1200",
+    //   photo: "foto_wifi_card_AC1200.jpg",
+    //   category: "Componentes",
+    //   price: 120000,
+    //   stock: 22,
+    // });
 
-    //Este se usa para probar métodos con parámetro id
-    await gestorDeProductos.create({
-      id: "123456789",
-      title: "Memoria RAM DDR4 16GB",
-      photo: "foto_ram16.jpg",
-      category: "Componentes",
-      price: 200000,
-      stock: 5,
-    });
+    // //Este se usa para probar métodos con parámetro id
+    // await gestorDeProductos.create({
+    //   id: "123456789",
+    //   title: "Memoria RAM DDR4 16GB",
+    //   photo: "foto_ram16.jpg",
+    //   category: "Componentes",
+    //   price: 200000,
+    //   stock: 5,
+    // });
 
     await gestorDeProductos.read();
     await gestorDeProductos.readOne("123456789");
@@ -199,3 +203,6 @@ async function test() {
 }
 
 test();
+
+const Productos = new ProductManager();
+export default Productos;

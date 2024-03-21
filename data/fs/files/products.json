@@ -1,14 +1,6 @@
 [
   {
-    "id": "6612acc35cecb5cc025867fc",
-    "title": "Placa de Video NVIDIA RTX3050",
-    "photo": "foto_Video_NVIDIA.jpg",
-    "category": "Placa de Video",
-    "price": 350000,
-    "stock": 10
-  },
-  {
-    "id": "ccdd01d0d2e4aeee4bc70d99",
+    "id": "1baefda28f88e843b9bc16f0",
     "title": "Monitor Samsung 24 pulgadas",
     "photo": "foto_Mon_Sam_24.jpg",
     "category": "Monitor",
@@ -16,7 +8,7 @@
     "stock": 30
   },
   {
-    "id": "a9469d7c206028eb2f2bad9a",
+    "id": "53407a2fe24722fa97d5b6a2",
     "title": "Microprocesador AMD Ryzen 7",
     "photo": "foto_uP_Ryzen_7.jpg",
     "category": "Microprocesador",
@@ -24,7 +16,7 @@
     "stock": 5
   },
   {
-    "id": "69aca740c1784e98569342c1",
+    "id": "f40d03f7ccf76ca328cea73b",
     "title": "Silla Gamer MID PLUS ROJA",
     "photo": "foto_Gamer_Roja.jpg",
     "category": "Silla Gamer",
@@ -32,7 +24,7 @@
     "stock": 15
   },
   {
-    "id": "9132f95ef021ee61225014f6",
+    "id": "6f6514908dc2c41eb38cbfe4",
     "title": "Mother Asus Prime A320M-K",
     "photo": "foto_Mother_A320M.jpg",
     "category": "Motherboard",
@@ -40,7 +32,7 @@
     "stock": 50
   },
   {
-    "id": "2b4a913b730c2e9b7f093bf0",
+    "id": "47d62d48ee0eab5a79fc2ed4",
     "title": "Teclado RGB",
     "photo": "foto_keyboard.jpg",
     "category": "Periféricos",
@@ -48,7 +40,7 @@
     "stock": 150
   },
   {
-    "id": "6851f8abe8205ce5801342a9",
+    "id": "5e35b8205ce3fb6ea7ec86b4",
     "title": "Fuente de alimentación 600W",
     "photo": "foto_psu600.jpg",
     "category": "Fuentes",
@@ -56,7 +48,7 @@
     "stock": 20
   },
   {
-    "id": "3425ccc771125765494d5bae",
+    "id": "7318753b07a1a3e32ec6e6f4",
     "title": "Auriculares con micrófono",
     "photo": "foto_headset_mic.jpg",
     "category": "Componentes",
@@ -64,11 +56,75 @@
     "stock": 34
   },
   {
-    "id": "9c15278f5ecd352cceabb038",
+    "id": "211007b4cd6ffab856da8318",
     "title": "Tarjeta de red Wi-Fi AC1200",
     "photo": "foto_wifi_card_AC1200.jpg",
     "category": "Componentes",
     "price": 120000,
     "stock": 22
+  },
+  {
+    "id": "1baefda28f88e843b9bc16f0",
+    "title": "Monitor Samsung 24 pulgadas",
+    "photo": "foto_Mon_Sam_24.jpg",
+    "category": "Monitor",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "1baefda28f88e843b9bc16f0",
+    "title": "Monitor Samsung 24 pulgadas",
+    "photo": "foto_Mon_Sam_24.jpg",
+    "category": "Monitor",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "1baefda28f88e843b9bc16f0",
+    "title": "Monitor Samsung 24 pulgadas",
+    "photo": "foto_Mon_Sam_24.jpg",
+    "category": "Monitor",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "1baefda28f88e843b9bc16f0",
+    "title": "Monitor Samsung 24 pulgadas",
+    "photo": "foto_Mon_Sam_24.jpg",
+    "category": "Monitor",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "1baefda28f88e843b9bc16f0",
+    "title": "Monitor Samsung 24 pulgadas",
+    "photo": "foto_Mon_Sam_24.jpg",
+    "category": "Monitor",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "1baefda28f88e843b9bc16f0",
+    "title": "Monitor Samsung 24 pulgadas",
+    "photo": "foto_Mon_Sam_24.jpg",
+    "category": "Monitor",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "53407a2fe24722fa97d5b6a2",
+    "title": "Microprocesador AMD Ryzen 7",
+    "photo": "foto_uP_Ryzen_7.jpg",
+    "category": "Microprocesador",
+    "price": 250000,
+    "stock": 5
+  },
+  {
+    "id": "53407a2fe24722fa97d5b6a2",
+    "title": "Microprocesador AMD Ryzen 7",
+    "photo": "foto_uP_Ryzen_7.jpg",
+    "category": "Microprocesador",
+    "price": 250000,
+    "stock": 5
   }
 ]

@@ -1,16 +1,42 @@
 # codeserver
 Repositorio de entregas - Curso Backend Coderhouse
 
-# Segundo Desafío:
-- Aspectos a incluir 
-Gestores de “productos” y de “usuarios” para guardar los datos en la memoria (memory) y en archivos (files).
-Definir cuatro usuarios y diez productos en memoria y en archivos.
-Las clases ProductsManager y UsersManager de memory:
--create(data) agregar manejo de errores con try/catch
--read() agregar manejo de errores con try/catch
--readOne(id) debe retornar el recurso encontrado con el id, manejar errores con try/catch
--destroy(id) debe eliminar el recurso encontrado con el id y devolver el objeto eliminado, manejar errores con try/catch
-Las clases ProductsManager y UsersManager de fs con los mismos métodos. Manejar errores con try/catch.
+# Tercer Desafío:
+- Endpoints de productos:
+GET /api/products debe implementar el método read() para buscar todos los productos de fs. Agregar la query necesaria para filtrar por categoría:
+Si el array tiene productos, enviar al cliente un objeto con las propiedades:
+statusCode: 200
+response: (el array)
+Si el array no tiene elementos, enviar al cliente un objeto con las propiedades:
+statusCode: 404
+response: null
+message: (mensaje descriptivo)
+- GET /api/products/:pid debe implementar el método readOne(pid) para buscar un producto de fs:
+Si se encuentra el producto, enviar al cliente un objeto con las propiedades:
+statusCode: 200
+response: (el objeto)
+Si no se encuentra, enviar al cliente un objeto con las propiedades:
+statusCode: 404
+response: null
+message: (mensaje descriptivo)
+- Endpoints de usuarios:
+GET /api/users debe implementar el método read() para buscar todos los usuarios de fs. Agregar la query necesaria para filtrar por rol:
+Si el array tiene usuarios, enviar al cliente un objeto con las propiedades:
+statusCode: 200
+response: (el array)
+Si el array no tiene elementos, enviar al cliente un objeto con las propiedades:
+statusCode: 404
+response: null
+message: (mensaje descriptivo)
+- GET /api/users/:uid debe implementar el método readOne(uid) para buscar un usuario de fs:
+Si se encuentra el usuario, enviar al cliente un objeto con las propiedades:
+statusCode: 200
+response: (el objeto)
+Si no se encuentra, enviar al cliente un objeto con las propiedades:
+statusCode: 404
+response: null
+message: (mensaje descriptivo)
+
 
 ## Rama Dev
 - En esta rama se hizo el Merge desde la rama sprint2.
