@@ -39,9 +39,9 @@ message: (mensaje descriptivo)
 
 
 ## Rama Dev
-- En esta rama se hizo el Merge desde la rama sprint2.
+- En esta rama se hizo el Merge desde la rama sprint3.
 
-## Rama Sprint2
+## Rama Sprint3
 - En esta rama se trabajó y luego se hizo el Merge en rama Dev. Acto seguido, fue eliminada
 
 ## Pasos para su utilización
@@ -50,10 +50,9 @@ message: (mensaje descriptivo)
 - Abrir el proyecto con VSC.
 - Abrir una terminal en esa carpeta.
 - Ejecutar "git checkout dev" para cambiar a rama dev.
-- Ejecutar node ./data/fs/files/ProductManager.fs.js para usar la clase de los productos con manejo de archivos.
-- node ./data/fs/files/UserManager.fs.js para usar la de los usuarios con manejo de archivos.
-- node ./data/memory/ProductManager.memory.js para usar la clase de los productos en memoria. 
-- node ./data/memory/UserManager.memory.js para usar la clase de los usuarios en memoria. 
+- Ejecutar "npm install".
+- Ejecutar "npm run dev".
+- Abrir en el navegador "localhost:3500" con las rutas del proyecto.
 
 # Autor:
 Matías Nicolás Correa.
