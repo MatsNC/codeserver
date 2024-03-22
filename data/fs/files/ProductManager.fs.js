@@ -51,18 +51,17 @@ class ProductManager {
   async read(cat) {
     try {
       let allProducts = await fs.promises.readFile(this.path, "utf-8");
-      allProducts = JSON.parse(allProducts);
+      allProducts = JSON.parse(allProducts);      
       if (allProducts.length === 0) {
         throw new Error("No hay productos cargados");
       } else {
         if (cat) {
           allProducts = allProducts.filter((each) => each.category === cat);
-          console.log(allProducts);        
-          
+                  
         }
-        // console.log(
-        //   "Lista de Productos: " + JSON.stringify(allProducts, null, 2)
-        // );        
+        console.log(
+          "Lista de Productos: " + JSON.stringify(allProducts, null, 2)
+        );        
       }
       return allProducts;
     } catch (error) {
@@ -84,7 +83,7 @@ class ProductManager {
         return findProduct;
       }
     } catch (error) {
-      console.log(error);
+      console.log(error);      
     }
   }
   //Metodo para eliminar un producto del archivo:
@@ -195,8 +194,8 @@ async function test() {
     // });
 
     await gestorDeProductos.read();
-    await gestorDeProductos.readOne("123456789");
-    await gestorDeProductos.destroy("123456789");
+    // await gestorDeProductos.readOne("123456789");
+    // await gestorDeProductos.destroy("123456789");
   } catch (error) {
     console.log(error);
   }

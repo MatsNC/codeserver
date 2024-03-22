@@ -1,5 +1,5 @@
-import fs from 'fs';
-import crypto from 'crypto';
+import fs from "fs";
+import crypto from "crypto";
 
 class UserManager {
   constructor() {
@@ -8,7 +8,7 @@ class UserManager {
   }
   //Metodo para crear archivo de usuarios:
   init() {
-    fs.unlinkSync(this.path);
+    //fs.unlinkSync(this.path);
     const exist = fs.existsSync(this.path);
     if (!exist) {
       const userArray = JSON.stringify([], null, 2);
@@ -44,24 +44,24 @@ class UserManager {
       }
     } catch (error) {
       console.log(error);
+      
     }
   }
   //Metodo para leer listado de usuarios desde archivo:
-  async read() {
+  async read(role) {
     try {
       let allUsers = await fs.promises.readFile(this.path, "utf-8");
       allUsers = JSON.parse(allUsers);
-      if (allUsers.length === 0) {
-        throw new Error("No hay usuarios cargados");
-      } else {
-        console.log("Lista de Usuarios: " + JSON.stringify(allUsers, null, 2));
-        //console.log(allUsers);
-        return allUsers;
+      if (role) {
+        allUsers = allUsers.filter(u => u.role === role);
       }
+      return allUsers;
     } catch (error) {
       console.log(error);
+     
     }
   }
+
   //Metodo para encontrar un usuario por id en archivo:
   async readOne(id) {
     try {
@@ -76,6 +76,7 @@ class UserManager {
       }
     } catch (error) {
       console.log(error);
+      
     }
   }
   //Metodo para eliminar un usuario del archivo:
@@ -96,7 +97,7 @@ class UserManager {
         return destroyUser;
       }
     } catch (error) {
-      console.log(error);
+      console.log(error);      
     }
   }
 }
@@ -104,40 +105,43 @@ class UserManager {
 async function test() {
   try {
     const gestorDeUsuario = new UserManager();
-    await gestorDeUsuario.create({
-      photo: "foto_usr1.jpg",
-      email: "rodri_perez@gmail.com",
-      password: "RoDP#5870*!",
-      role: "Admin",
-    });
+    // await gestorDeUsuario.create({
+    //   photo: "foto_usr1.jpg",
+    //   email: "rodri_perez@gmail.com",
+    //   password: "RoDP#5870*!",
+    //   role: "Admin",
+    // });
 
-    await gestorDeUsuario.create({
-      photo: "foto_usr2.jpg",
-      email: "matspind_45@gmail.com",
-      password: "654!La3p2L1*",
-      role: "Key User",
-    });
+    // await gestorDeUsuario.create({
+    //   photo: "foto_usr2.jpg",
+    //   email: "matspind_45@gmail.com",
+    //   password: "654!La3p2L1*",
+    //   role: "Key User",
+    // });
 
-    await gestorDeUsuario.create({
-      photo: "foto_usr3.jpg",
-      email: "maria@gmail.com",
-      password: "L#2vF6Qz@",
-      role: "Client",
-    });
+    // await gestorDeUsuario.create({
+    //   photo: "foto_usr3.jpg",
+    //   email: "maria@gmail.com",
+    //   password: "L#2vF6Qz@",
+    //   role: "Client",
+    // });
 
-    await gestorDeUsuario.create({
-      id: "123456789",
-      photo: "foto_usr4.jpg",
-      email: "juan_carlos@yahoo.com",
-      password: "Gp5@jR9d!",
-      role: "Admin",
-    });
-    await gestorDeUsuario.read();
-    await gestorDeUsuario.readOne("123456789");
-    await gestorDeUsuario.destroy("123456789");
+    // await gestorDeUsuario.create({
+    //   id: "123456789",
+    //   photo: "foto_usr4.jpg",
+    //   email: "juan_carlos@yahoo.com",
+    //   password: "Gp5@jR9d!",
+    //   role: "Admin",
+    // });
+    // await gestorDeUsuario.read();
+    // await gestorDeUsuario.readOne("123456789");
+    // await gestorDeUsuario.destroy("123456789");
   } catch (error) {
     console.log(error);
   }
 }
 
 test();
+
+const Productos = new UserManager();
+export default Productos;
