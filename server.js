@@ -12,39 +12,7 @@ server.listen(PORT, ready);
 //middleware:
 server.use(express.urlencoded({ extended: true }));
 
-// server.use(express.json());
-
-// //router:
-// server.get("/", async (req, res) => {
-//   try {
-//     return res.json({
-//       statusCode: 200,
-//       message: "CODER API",
-//     });
-//   } catch (error) {
-//     return res.json({ statusCode: 500, message: "CODER API ERROR" });
-//   }
-// });
-
-// async function create(req, res) {
-//   try {
-//     const data = req.body;
-//     const one = await Productos.create(data);
-//     res.json({
-//       statusCode: 201,
-//       message: "Product ID: " + one.id,
-//     });
-//   } catch (error) {
-//     return res.json({
-//       statusCode: error.statusCode || 500,
-//       message: error.message || "CODER API ERROR",
-//     });
-//   }
-// }
-
-// server.post("/api/products", create);
-
-//////////////////////////////////////////////
+//Server for products
 
 const prod_route = "/api/products";
 const index_route = "/";
@@ -113,6 +81,7 @@ server.get(params_route, params_function);
 
 //////////////////////////////////////////////////////////////
 
+//Server for users
 const users_route = "/api/users";
 const params_users_route = "/api/users/:uid";
 
