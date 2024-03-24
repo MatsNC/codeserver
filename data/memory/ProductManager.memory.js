@@ -156,6 +156,86 @@ oneProduct.create({
   stock: 5,
 });
 
+oneProduct.create({
+  title: "Procesador AMD Ryzen 7 5800X",
+  photo: "foto_Procesador_AMD.jpg",
+  category: "Procesador",
+  price: 450000,
+  stock: 15,
+});
+
+oneProduct.create({
+  title: "Memoria RAM Corsair Vengeance RGB Pro 16GB",
+  photo: "foto_Memoria_RAM_Corsair.jpg",
+  category: "Memoria RAM",
+  price: 200000,
+  stock: 20,
+});
+
+oneProduct.create({
+  title: "Disco Duro SSD Samsung 1TB",
+  photo: "foto_SSD_Samsung.jpg",
+  category: "Almacenamiento",
+  price: 180000,
+  stock: 25,
+});
+
+oneProduct.create({
+  title: "Monitor LG UltraWide 34 pulgadas",
+  photo: "foto_Monitor_LG.jpg",
+  category: "Monitores",
+  price: 550000,
+  stock: 8,
+});
+
+oneProduct.create({
+  title: "Teclado mecánico Corsair K95 RGB Platinum",
+  photo: "foto_Teclado_Corsair.jpg",
+  category: "Periféricos",
+  price: 280000,
+  stock: 12,
+});
+
+oneProduct.create({
+  title: "Ratón Logitech G502 HERO",
+  photo: "foto_Raton_Logitech.jpg",
+  category: "Periféricos",
+  price: 150000,
+  stock: 30,
+});
+
+oneProduct.create({
+  title: "Tarjeta madre ASUS ROG Strix B550-F",
+  photo: "foto_Tarjeta_madre_ASUS.jpg",
+  category: "Componentes",
+  price: 280000,
+  stock: 10,
+});
+
+oneProduct.create({
+  title: "Fuente de alimentación Corsair RM750x",
+  photo: "foto_Fuente_alimentacion_Corsair.jpg",
+  category: "Componentes",
+  price: 200000,
+  stock: 15,
+});
+
+oneProduct.create({
+  title: "Caja de PC NZXT H510",
+  photo: "foto_Caja_PC_NZXT.jpg",
+  category: "Componentes",
+  price: 120000,
+  stock: 20,
+});
+
+oneProduct.create({
+  title: "Ventilador Corsair LL120 RGB",
+  photo: "foto_Ventilador_Corsair.jpg",
+  category: "Componentes",
+  price: 50000,
+  stock: 40,
+});
+
 console.log("List of Products:");
 console.log(oneProduct.read());
 console.log("Product found:");
