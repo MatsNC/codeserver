@@ -110,25 +110,25 @@ async function read_users(req, res) {
 
 async function params_users(req, res) {
   try {
-    const { uid } = req.params
-    const one = await Users.readOne(uid)
+    const { uid } = req.params;
+    const one = await Users.readOne(uid);
     if (one) {
-        return res.status(200).json({
-            response: one,
-            success: true
-        })
+      return res.status(200).json({
+        response: one,
+        success: true,
+      });
     } else {
-        const error = new Error("NOT FOUND")
-        error.statusCode = 404
-        throw error
+      const error = new Error("NOT FOUND");
+      error.statusCode = 404;
+      throw error;
     }
-} catch (error) {
+  } catch (error) {
     console.log(error);
     return res.status(error.statusCode).json({
-        response: error.message,
-        success: false
-    })
-}
+      response: error.message,
+      success: false,
+    });
+  }
 }
 
 server.get(users_route, read_users);

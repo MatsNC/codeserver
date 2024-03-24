@@ -52,7 +52,7 @@ message: (mensaje descriptivo)
 - Ejecutar "git checkout dev" para cambiar a rama dev.
 - Ejecutar "npm install".
 - Ejecutar "npm run dev".
-- Abrir en el navegador "localhost:3500" con las rutas del proyecto.
+- Abrir en el navegador "localhost:3500" con las rutas del proyecto (/, /api/products, api/users, /api/products/pid, /api/users/uid y las respectivas querys).
 
 # Autor:
 Matías Nicolás Correa.

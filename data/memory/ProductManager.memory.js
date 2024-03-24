@@ -1,36 +1,36 @@
-import crypto from 'crypto';
+import crypto from "crypto";
 
 class ProductManager {
   static #productos = [];
-  //Metodo para crear un producto:
+  //Method to create a new Product:
   create(data) {
     try {
       const product = {
         id: data.id || crypto.randomBytes(12).toString("hex"),
         title: data.title,
-        photo: data.photo || "foto_default.jpg",
+        photo: data.photo || "photo_default.jpg",
         category: data.category,
         price: data.price,
         stock: data.stock,
       };
       if (!data.title || !data.category || !data.price || !data.stock) {
         throw new Error(
-          "No se pudo crear el producto. Ingrese nombre, categoria, precio y stock"
+          "Product not created. Please enter name, category, price and stock"
         );
       } else {
         ProductManager.#productos.push(product);
-        console.log("Producto Creado");
+        console.log("Product created successfully");
         return product;
       }
     } catch (error) {
       console.log(error);
     }
   }
-  //Metodo para leer listado de productos:
+  //Method to read Products List:
   read() {
     try {
       if (ProductManager.#productos.length === 0) {
-        throw new Error("No hay productos cargados");
+        throw new Error("There are no products");
       } else {
         return ProductManager.#productos;
       }
@@ -38,7 +38,7 @@ class ProductManager {
       console.log(error);
     }
   }
-  //Metodo para encontrar un producto especifico:
+  //Method to find a product by id:
   readOne(id) {
     try {
       const findProd = ProductManager.#productos.find(
@@ -47,18 +47,18 @@ class ProductManager {
       if (findProd !== undefined) {
         return findProd;
       } else {
-        throw new Error("Producto no encontrado");
+        throw new Error("Product not found");
       }
     } catch (error) {
       console.log(error);
     }
   }
-  //Metodo para eliminar un producto:
+  //Method to destroy a product :
   destroy(id) {
     try {
       let destroyProduct = this.readOne(id);
       if (!destroyProduct) {
-        throw new Error("Producto no encontrado");
+        throw new Error("Product not found");
       } else {
         const newArray = ProductManager.#productos.filter(
           (product) => product.id !== id
@@ -72,9 +72,9 @@ class ProductManager {
   }
 }
 
-const gestorDeProductos = new ProductManager();
+const oneProduct = new ProductManager();
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Placa de Video NVIDIA RTX3050",
   photo: "foto_Video_NVIDIA.jpg",
   category: "Placa de Video",
@@ -82,7 +82,7 @@ gestorDeProductos.create({
   stock: 10,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Monitor Samsung 24 pulgadas",
   photo: "foto_Mon_Sam_24.jpg",
   category: "Monitor",
@@ -90,7 +90,7 @@ gestorDeProductos.create({
   stock: 30,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Microprocesador AMD Ryzen 7",
   photo: "foto_uP_Ryzen_7.jpg",
   category: "Microprocesador",
@@ -98,7 +98,7 @@ gestorDeProductos.create({
   stock: 5,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Silla Gamer MID PLUS ROJA",
   photo: "foto_Gamer_Roja.jpg",
   category: "Silla Gamer",
@@ -106,7 +106,7 @@ gestorDeProductos.create({
   stock: 15,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Mother Asus Prime A320M-K",
   photo: "foto_Mother_A320M.jpg",
   category: "Motherboard",
@@ -114,7 +114,7 @@ gestorDeProductos.create({
   stock: 50,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Teclado RGB",
   photo: "foto_keyboard.jpg",
   category: "Periféricos",
@@ -122,7 +122,7 @@ gestorDeProductos.create({
   stock: 150,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Fuente de alimentación 600W",
   photo: "foto_psu600.jpg",
   category: "Fuentes",
@@ -130,7 +130,7 @@ gestorDeProductos.create({
   stock: 20,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Auriculares con micrófono",
   photo: "foto_headset_mic.jpg",
   category: "Componentes",
@@ -138,7 +138,7 @@ gestorDeProductos.create({
   stock: 34,
 });
 
-gestorDeProductos.create({
+oneProduct.create({
   title: "Tarjeta de red Wi-Fi AC1200",
   photo: "foto_wifi_card_AC1200.jpg",
   category: "Componentes",
@@ -147,7 +147,7 @@ gestorDeProductos.create({
 });
 
 //Este se usa para probar métodos con parámetro id
-gestorDeProductos.create({
+oneProduct.create({
   id: "123456789",
   title: "Memoria RAM DDR4 16GB",
   photo: "foto_ram16.jpg",
@@ -156,13 +156,13 @@ gestorDeProductos.create({
   stock: 5,
 });
 
-console.log("Listado de Productos:");
-console.log(gestorDeProductos.read());
-console.log("Producto buscado:");
-console.log(gestorDeProductos.readOne("123456789"));
-console.log("Producto borrado:");
-console.log(gestorDeProductos.destroy("123456789"));
-console.log("Listado actualizado:");
-console.log(gestorDeProductos.read());
+console.log("List of Products:");
+console.log(oneProduct.read());
+console.log("Product found:");
+console.log(oneProduct.readOne("123456789"));
+console.log("Product deleted:");
+console.log(oneProduct.destroy("123456789"));
+console.log("Updated list:");
+console.log(oneProduct.read());
 
 export default Products = new ProductManager();

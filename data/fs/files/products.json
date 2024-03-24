@@ -1,6 +1,14 @@
 [
   {
-    "id": "1baefda28f88e843b9bc16f0",
+    "id": "ad7faf812435ea4c4bb147e3",
+    "title": "Placa de Video NVIDIA RTX3050",
+    "photo": "foto_Video_NVIDIA.jpg",
+    "category": "Placa de Video",
+    "price": 350000,
+    "stock": 10
+  },
+  {
+    "id": "c452c3f8cfc6ceba7c085cfc",
     "title": "Monitor Samsung 24 pulgadas",
     "photo": "foto_Mon_Sam_24.jpg",
     "category": "Monitor",
@@ -8,7 +16,7 @@
     "stock": 30
   },
   {
-    "id": "53407a2fe24722fa97d5b6a2",
+    "id": "a06cdaaa1c9bd605d95eee1f",
     "title": "Microprocesador AMD Ryzen 7",
     "photo": "foto_uP_Ryzen_7.jpg",
     "category": "Microprocesador",
@@ -16,7 +24,7 @@
     "stock": 5
   },
   {
-    "id": "f40d03f7ccf76ca328cea73b",
+    "id": "398896c21d1dee60dc5a9a21",
     "title": "Silla Gamer MID PLUS ROJA",
     "photo": "foto_Gamer_Roja.jpg",
     "category": "Silla Gamer",
@@ -24,7 +32,7 @@
     "stock": 15
   },
   {
-    "id": "6f6514908dc2c41eb38cbfe4",
+    "id": "35ebe0a8a7e9e00bf18d7f70",
     "title": "Mother Asus Prime A320M-K",
     "photo": "foto_Mother_A320M.jpg",
     "category": "Motherboard",
@@ -32,7 +40,7 @@
     "stock": 50
   },
   {
-    "id": "47d62d48ee0eab5a79fc2ed4",
+    "id": "46b2e4bc387b2b4471aba6b1",
     "title": "Teclado RGB",
     "photo": "foto_keyboard.jpg",
     "category": "Periféricos",
@@ -40,7 +48,7 @@
     "stock": 150
   },
   {
-    "id": "5e35b8205ce3fb6ea7ec86b4",
+    "id": "3b3038ff8c7a1ad77f41b5c5",
     "title": "Fuente de alimentación 600W",
     "photo": "foto_psu600.jpg",
     "category": "Fuentes",
@@ -48,7 +56,7 @@
     "stock": 20
   },
   {
-    "id": "7318753b07a1a3e32ec6e6f4",
+    "id": "01d9fca5b21a04add9da7436",
     "title": "Auriculares con micrófono",
     "photo": "foto_headset_mic.jpg",
     "category": "Componentes",
@@ -56,7 +64,7 @@
     "stock": 34
   },
   {
-    "id": "211007b4cd6ffab856da8318",
+    "id": "cf3ef0668fcf3e7df13170d9",
     "title": "Tarjeta de red Wi-Fi AC1200",
     "photo": "foto_wifi_card_AC1200.jpg",
     "category": "Componentes",
@@ -64,67 +72,91 @@
     "stock": 22
   },
   {
-    "id": "1baefda28f88e843b9bc16f0",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "1baefda28f88e843b9bc16f0",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "1baefda28f88e843b9bc16f0",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "1baefda28f88e843b9bc16f0",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "1baefda28f88e843b9bc16f0",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "1baefda28f88e843b9bc16f0",
-    "title": "Monitor Samsung 24 pulgadas",
-    "photo": "foto_Mon_Sam_24.jpg",
-    "category": "Monitor",
-    "price": 150000,
-    "stock": 30
-  },
-  {
-    "id": "53407a2fe24722fa97d5b6a2",
-    "title": "Microprocesador AMD Ryzen 7",
-    "photo": "foto_uP_Ryzen_7.jpg",
-    "category": "Microprocesador",
-    "price": 250000,
+    "id": "123456789",
+    "title": "Memoria RAM DDR4 16GB",
+    "photo": "foto_ram16.jpg",
+    "category": "Componentes",
+    "price": 200000,
     "stock": 5
   },
   {
-    "id": "53407a2fe24722fa97d5b6a2",
-    "title": "Microprocesador AMD Ryzen 7",
-    "photo": "foto_uP_Ryzen_7.jpg",
-    "category": "Microprocesador",
-    "price": 250000,
-    "stock": 5
+    "id": "4ffad0e5e9d2211a77089072",
+    "title": "Procesador AMD Ryzen 7 5800X",
+    "photo": "foto_Procesador_AMD.jpg",
+    "category": "Procesador",
+    "price": 450000,
+    "stock": 15
+  },
+  {
+    "id": "f695df8a16780cd644bf9477",
+    "title": "Memoria RAM Corsair Vengeance RGB Pro 16GB",
+    "photo": "foto_Memoria_RAM_Corsair.jpg",
+    "category": "Memoria RAM",
+    "price": 200000,
+    "stock": 20
+  },
+  {
+    "id": "5760be496d49bc411bd3d0ff",
+    "title": "Disco Duro SSD Samsung 1TB",
+    "photo": "foto_SSD_Samsung.jpg",
+    "category": "Almacenamiento",
+    "price": 180000,
+    "stock": 25
+  },
+  {
+    "id": "afdd54287098945a38cd8a7e",
+    "title": "Monitor LG UltraWide 34 pulgadas",
+    "photo": "foto_Monitor_LG.jpg",
+    "category": "Monitores",
+    "price": 550000,
+    "stock": 8
+  },
+  {
+    "id": "c62fb5cea0bc5785e5896914",
+    "title": "Teclado mecánico Corsair K95 RGB Platinum",
+    "photo": "foto_Teclado_Corsair.jpg",
+    "category": "Periféricos",
+    "price": 280000,
+    "stock": 12
+  },
+  {
+    "id": "83d2bbf873da9dc3650e69b6",
+    "title": "Ratón Logitech G502 HERO",
+    "photo": "foto_Raton_Logitech.jpg",
+    "category": "Periféricos",
+    "price": 150000,
+    "stock": 30
+  },
+  {
+    "id": "25216b995e63191150f415fe",
+    "title": "Tarjeta madre ASUS ROG Strix B550-F",
+    "photo": "foto_Tarjeta_madre_ASUS.jpg",
+    "category": "Componentes",
+    "price": 280000,
+    "stock": 10
+  },
+  {
+    "id": "60af7edf633305fa321d68ae",
+    "title": "Fuente de alimentación Corsair RM750x",
+    "photo": "foto_Fuente_alimentacion_Corsair.jpg",
+    "category": "Componentes",
+    "price": 200000,
+    "stock": 15
+  },
+  {
+    "id": "4b4434d66397919ebde13480",
+    "title": "Caja de PC NZXT H510",
+    "photo": "foto_Caja_PC_NZXT.jpg",
+    "category": "Componentes",
+    "price": 120000,
+    "stock": 20
+  },
+  {
+    "id": "8c9d29da854573318ea78f21",
+    "title": "Ventilador Corsair LL120 RGB",
+    "photo": "foto_Ventilador_Corsair.jpg",
+    "category": "Componentes",
+    "price": 50000,
+    "stock": 40
   }
 ]
