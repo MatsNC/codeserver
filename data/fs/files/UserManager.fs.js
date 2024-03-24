@@ -143,5 +143,5 @@ async function test() {
 
 test();
 
-const Productos = new UserManager();
-export default Productos;
+const Users = new UserManager();
+export default Users;
