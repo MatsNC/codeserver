@@ -1,0 +1,26 @@
+[
+  {
+    "id": "3215365874",
+    "title": "Auriculares con micrófono",
+    "photo": "foto_headset_mic.jpg",
+    "category": "Componentes",
+    "price": 35000,
+    "stock": 34
+  },
+  {
+    "id": "3215365874",
+    "title": "con micrófono",
+    "photo": "foto_headset_mic.jpg",
+    "category": "Componentes",
+    "price": 35000,
+    "stock": 34
+  },
+  {
+    "id": "32174",
+    "title": "con micrófono",
+    "photo": "foto_headset_mic.jpg",
+    "category": "Componentes",
+    "price": 35000,
+    "stock": 34
+  }
+]

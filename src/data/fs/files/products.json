@@ -64,19 +64,27 @@
     "stock": 34
   },
   {
-    "id": "9c15278f5ecd352cceabb038",
-    "title": "Tarjeta de red Wi-Fi AC1200",
-    "photo": "foto_wifi_card_AC1200.jpg",
-    "category": "Componentes",
-    "price": 120000,
-    "stock": 22
+    "id": "53407a2fe24722fa97d5b6a2",
+    "title": "Notebook HP Victus",
+    "photo": "photo_Victus.jpg",
+    "category": "Notebook",
+    "price": 2000000,
+    "stock": 5
   },
   {
-    "id": "53407a2fe24722fa97d5b6a2",
-    "title": "Auriculares",
-    "photo": "foto_uP_Ryzen_7.jpg",
-    "category": "Microprocesador",
-    "price": 250000,
-    "stock": 5
+    "id": "32174",
+    "title": "con micrófono",
+    "photo": "foto_headset_mic.jpg",
+    "category": "Componentes",
+    "price": 35000,
+    "stock": 34
+  },
+  {
+    "id": "32174562",
+    "title": "con micrófono",
+    "photo": "foto_headset_mic.jpg",
+    "category": "Componentes",
+    "price": 35000,
+    "stock": 34
   }
 ]

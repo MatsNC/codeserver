@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 class ProductManager {
   constructor() {
-    this.path = "./data/fs/files/products.json";
+    this.path = "./src/data/fs/files/products.json";
     this.init();
   }
   //Method to create a new Products file:
@@ -289,7 +289,7 @@ async function test() {
     //   stock: 40,
     // });
 
-    // await oneProduct.read();
+    //await oneProduct.read();
     // await oneProduct.readOne("123456789");
     // await oneProduct.destroy("123456789");
   } catch (error) {
